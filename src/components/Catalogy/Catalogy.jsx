@@ -2,6 +2,8 @@ import s from './Catalogy.module.css'
 import BlueBtn from '../BlueBtn/BlueBtn';
 import GrayBtn from '../GrayBtn/GrayBtn';
 import Card from './Card/Card';
+import { products } from '../../products';
+import { categories } from '../../categories';
 
 export default function Catalogy(){
     return(
@@ -13,19 +15,22 @@ export default function Catalogy(){
             <div className={s.Categories}>
               <h2>Категории: </h2>
               <br />
-              <BlueBtn text="Все товары" /> {}
+              {
+                categories.map(categori => <BlueBtn text={categori.name}/>)
+              }
+
+
+              {/* <BlueBtn text="Все товары" /> {}
               <GrayBtn text="Шины/колеса" /> {}
               <GrayBtn text="Масла" /> {}
-              <GrayBtn text="Ароматизаторы" /> {}
+              <GrayBtn text="Ароматизаторы" /> {} */}
             </div>
 
             <div className={s.cards}>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {
+                  products.map(product => <Card name={product.name} price = {product.price} />)
+                }
+                
             </div>
           </div>
         </div>
