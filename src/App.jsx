@@ -4,7 +4,7 @@ import Banner from './components/Banner/Banner';
 import Catalogy from './components/Catalogy/Catalogy';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage/HomePage';
-
+import ProductPage from './assets/ProductPage/ProductPage';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage/>}></Route>
         <Route path='/catalogWrapper' element={<Catalogy/>}></Route>
+        <Route path='/catalogWrapper/:id' element = {<ProductPage/>}></Route>
       </Routes>
       
     </>

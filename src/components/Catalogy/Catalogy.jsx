@@ -19,8 +19,7 @@ export default function Catalogy(){
                 categories.map(categori => <BlueBtn text={categori.name}/>)
               }
 
-
-              {/* <BlueBtn text="Все товары" /> {}
+              {/* <BlueBtn text="Все товаы" /> {}
               <GrayBtn text="Шины/колеса" /> {}
               <GrayBtn text="Масла" /> {}
               <GrayBtn text="Ароматизаторы" /> {} */}
@@ -28,7 +27,7 @@ export default function Catalogy(){
 
             <div className={s.cards}>
                 {
-                  products.map(product => <Card name={product.name} price = {product.price} />)
+                  products.map(product => <Card id = {product.id} imagePath= {product.imagePath} name={product.name} price = {product.price} />)
                 }
                 
             </div>
