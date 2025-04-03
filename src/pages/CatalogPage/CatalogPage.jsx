@@ -4,7 +4,7 @@ import CatalogWhiteBtn from '../CatalogPage/CatalogWhiteBtn/CatalogWhiteBtn'
 import s from './CatalogPage.module.css'
 import { products } from "../../products"
 import { useState } from "react"
-import Search from "../../components/Search/Search"
+import Search from "../../components/search/Search"
 
 export default function CatalogPage(){
     const [search, setSearch] = useState('');
